@@ -186,6 +186,8 @@ gui.addColor(debugObject, 'clearColor').onChange(()=>{
     renderer.setClearColor(debugObject.clearColor)
 })
 
+gui.hide()
+
 /**
  * Animate
  */
