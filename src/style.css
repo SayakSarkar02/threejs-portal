@@ -17,3 +17,13 @@ body
     left: 0;
     outline: none;
 }
+
+.heading{
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+    display: absolute;
+    z-index: 20;
+}

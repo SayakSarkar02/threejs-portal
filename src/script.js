@@ -1,4 +1,4 @@
-import * as dat from 'lil-gui'
+// import * as dat from 'lil-gui'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -16,10 +16,10 @@ import portalFragementShader from './shaders/portal/fragment.glsl'
  * Base
  */
 // Debug
-const debugObject = {}
-const gui = new dat.GUI({
-    width: 400
-})
+// const debugObject = {}
+// const gui = new dat.GUI({
+//     width: 400
+// })
 
 
 // Canvas
@@ -122,7 +122,7 @@ const firefliesMaterial = new THREE.ShaderMaterial({
     fragmentShader: firefliesFragementShader
 })
 
-gui.add(firefliesMaterial.uniforms.uSize, 'value').min(0).max(250).step(1).name('firefliesSize')
+// gui.add(firefliesMaterial.uniforms.uSize, 'value').min(0).max(250).step(1).name('firefliesSize')
 
 //Points
 const fireflies = new THREE.Points(firefliesGeometry, firefliesMaterial)
@@ -180,13 +180,14 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.outputEncoding = THREE.sRGBEncoding
 
-debugObject.clearColor = '#17172b'
-renderer.setClearColor(debugObject.clearColor)
-gui.addColor(debugObject, 'clearColor').onChange(()=>{
-    renderer.setClearColor(debugObject.clearColor)
-})
+// debugObject.clearColor = '#17172b'
+// renderer.setClearColor(debugObject.clearColor)
+renderer.setClearColor("#17172b")
+// gui.addColor(debugObject, 'clearColor').onChange(()=>{
+//     renderer.setClearColor(debugObject.clearColor)
+// })
 
-gui.hide()
+// gui.hide()
 
 /**
  * Animate
